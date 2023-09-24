@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: api-gateway
+    
+  cloud:
+    gateway:
+      routes:
+        - id: data-engine
+          url: http://data-engine:8080
+          predicates:
+            - Path=/data/** 
